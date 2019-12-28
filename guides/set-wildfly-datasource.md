@@ -7,7 +7,8 @@
 1. Ищем тег \<datasources\>
 1. Добавляем внутрь 
 ```xml
-<datasource jndi-name="java:jboss/datasources/yourDS" pool-name="database-datasource" enabled="true" use-java-context="false">
+<!--Пример датасорса для Postgres -->
+<datasource jndi-name="java:jboss/datasources/postgresDS" pool-name="database-datasource-postgres" enabled="true" use-java-context="false">
 	<connection-url>jdbc:postgresql://pg:5432/studs</connection-url>
 	<driver>postgresql-42.2.5.jar</driver>
 	<security>
@@ -15,9 +16,18 @@
 		<password>*****</password>
 	</security>
 </datasource>
-```
-Тут приведён пример для подключения к postgres на helios.  
-Внутрь тега security вводите свои данные для подключения к гелиосу.  
+<!--Пример датасорса для Oracle -->
+<datasource jndi-name="java:jboss/datasources/oracleDS" pool-name="database-datasource-orbis" enabled="true" use-java-context="false">
+        <connection-url>jdbc:oracle:thin:@localhost:1521:orbis</connection-url>
+        <driver>ojdbc6.jar</driver>
+        <security>
+                <user-name>s******</user-name>
+                <password>******</password>
+        </security>
+</datasource>
+
+```  
+Внутри тега security вводите свои данные для подключения к гелиосу.  
 В теге driver надо указать название драйвера, который мы задеплоили.  
 
 ### Замечание
