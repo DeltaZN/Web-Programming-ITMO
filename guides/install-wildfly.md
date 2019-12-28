@@ -45,6 +45,6 @@ Portbase необходим, чтобы задать смещение для в�
 то при portbase=10 эти порты будут, соотвественно, равны 8080+10=8090 и 9990+10=10000
 
 1. Откройте файл <wildfly-path>/standalone/configuration/standalone.xml
-1. Найдите строчку <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
+1. Найдите строчку socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}"
 1. Измените значение с port-offset="${jboss.socket.binding.port-offset:0}" на ваш portbase, например, если у нас portbase=1111, то изменяем так: port-offset="${jboss.socket.binding.port-offset:1111}"
 
