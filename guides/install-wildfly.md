@@ -83,3 +83,9 @@ port-offset="${jboss.socket.binding.port-offset:0}"
 port-offset="${jboss.socket.binding.port-offset:1111}"
 ```
 
+## Что делать если не создаются таблицы в БД?
+
+Вероятнее всего, приложение подключается к дефолтному датасорсу на WildFly. Найди следующую строчку в \<wildfly-directory\>/standalone/configuration/standalone.xml и удалите её:
+```xml
+<default-bindings context-service="java:jboss/ee/concurrency/context/default" datasource="java:jboss/datasources/ExampleDS" managed-executor-service="java:jboss/ee/concurrency/executor/default" managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default" managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
+```
