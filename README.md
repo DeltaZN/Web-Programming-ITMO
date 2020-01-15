@@ -12,3 +12,4 @@
 ## Lab 4
 
 1. Общая информация по [лабе](https://github.com/DeltaThreeEight/Web-Programming-ITMO/blob/master/guides/lab4.md)
+1. Подробный [гайд](https://github.com/DeltaThreeEight/Web-Programming-ITMO/blob/master/guides/lab4-detailed.md) по запуску моего бэка и фронта
