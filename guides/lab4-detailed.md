@@ -53,11 +53,20 @@
     npm start
     ```
 
-### Java EE и React, Angular
+### Java EE
+
+Здесь вам обязательно будет нужен сервер приложений [WildFly](https://wildfly.org/downloads/)
 
 1. Запускаете командную строку и переходите в удобную для вас директорию(например, корень диска D)
-1. Клонируем репозиторий с Java EE
+2. Клонируем репозиторий с Java EE
     ```cmd
     git clone https://github.com/DeltaThreeEight/Ejb-Backend-for-Lab4.git
     ```
-3. In progress...
+3. Открываем Ejb-Backend-for-Lab4/src/main/META-INF/persistence.xml и настраиваем под нашу БД
+4. Собираем проект 
+    ```cmd
+    gradlew.bat war
+    ```
+5. Собранный war лежит в build/libs, теперь его надо переместить в <wildfly-directory>/standalone/deployments
+6. Можно запускать сервер приложений WildFly
+7. Шаги по запуску фронтэнда аналогичны...
